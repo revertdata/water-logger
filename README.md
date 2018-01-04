@@ -25,3 +25,6 @@ CREATE TABLE IF NOT EXISTS january (
 	amount INTEGER
 );
 ```
+
+## Known Flaws
+- [ ] &nbsp; Cannot POST new entries (CORS issue?).  Temporary fix is to manually insert 0 values into monthly tables, but it's very inconvenient.

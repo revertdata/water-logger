@@ -59,8 +59,10 @@ function fillMonths() {
 
 						for (let n=0; n < monthInfo.length; n++) {
 							if (monthInfo[n]['did'] == daysCount) {
-								day.innerText = monthInfo[n]['amount'];
-								day.className += " filled";
+								if (monthInfo[n]['amount'] != 0) {
+									day.innerText = monthInfo[n]['amount'];
+									day.className += " filled";
+								}
 							}
 						}
 
