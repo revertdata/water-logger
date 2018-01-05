@@ -2,6 +2,7 @@ let apiURL = "https://water-logger.herokuapp.com";
 
 let startNumbering = false;
 let daysCount = 1;
+let currProgress = 0;
 
 function fillMonths() {
 	"use strict";
@@ -72,6 +73,7 @@ function fillMonths() {
 
 						if (day.innerText >= 50) {
 							day.className += " goalMet";
+							currProgress++;
 						}
 
 						day.id = `${monthsNames[i][0]}-${daysCount}`;
@@ -86,7 +88,9 @@ function fillMonths() {
 
 				currMonth.appendChild(week);
 			}
-		});
+		}).then(function() {
+			document.getElementById("goalProgress").innerText = currProgress;
+		})
 	}
 
 	for (let o = d.getMonth()+1; o < 12 - d.getMonth(); o++) {

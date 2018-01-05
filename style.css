@@ -103,6 +103,11 @@ footer {
 	border: 1px solid #afd2e5;
 }
 
+.goalProgress, .colorBox {
+	opacity: 0.2;
+	transition: ease-in-out opacity 0.2s;
+}
+
 .colorBox {
 	margin: 15px;
 	padding: 5px;
@@ -115,15 +120,13 @@ footer {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-
-	opacity: 0.2;
-	transition: ease-in-out opacity 0.2s;
 }
 
-.colorBox:hover {
+.goalProgress:hover, .colorBox:hover {
 	opacity: 1;
 	cursor: pointer;
 }
+
 
 @media (max-width: 500px) {
 	.page {
@@ -142,7 +145,10 @@ footer {
 	}
 
 	.colorBox {
-		opacity: 1;
 		margin-bottom: 100px;
+	}
+
+	.colorBox, .goalProgress {
+		opacity: 1;
 	}
 }
