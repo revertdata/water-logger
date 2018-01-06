@@ -1,13 +1,18 @@
 let apiURL = "https://water-logger.herokuapp.com";
+let dyno = document.getElementById("loading");
 
 function showLogger() {
 	"use strict";
+
+	dyno.style.display = "none";
 	document.getElementById("loggedOut").style.display = "none";
 	document.getElementById("loggedIn").style.display = "block";
 }
 
 function hideLogger() {
 	"use strict";
+
+	dyno.style.display = "none";
 	document.getElementById("loggedOut").style.display = "block";
 	document.getElementById("loggedIn").style.display = "none";
 }

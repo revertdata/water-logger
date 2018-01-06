@@ -8,7 +8,7 @@ html {
 	font-family: monospace;
 	text-transform: uppercase;
 	letter-spacing: 5px;
-	
+
 	background-color: rgb(66, 66, 66);
 }
 
@@ -34,7 +34,7 @@ h1 {
 }
 
 h2 {
-	margin-bottom: 80px; 
+	margin-bottom: 80px;
 }
 
 a {
@@ -45,7 +45,7 @@ a {
 form {
 	width: 100%;
 	height: 100%;
-	
+
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -95,6 +95,32 @@ footer a {
 
 	position: absolute;
 	display: none;
+}
+
+#dyno {
+	width: 400px;
+}
+
+#dyno img {
+	width: 200px;
+	height: 200px;
+}
+
+#dyno p {
+	display: block;
+
+	text-align: center;
+}
+
+.row {
+	width: 100%;
+	height: 100%;
+
+	position: absolute;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .btn {

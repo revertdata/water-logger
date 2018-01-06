@@ -9,7 +9,7 @@ function fillMonths() {
 
 	// Month name, DOW month starts, number of days in month \\
 	let monthsNames = {0: ["January", 1, 31], 1: ["Februrary", 4, 28], 2: ["March", 4, 31], 3: ["April", 0, 30], 4: ["May", 2, 31], 5: ["June", 5, 30], 6: ["July", 0, 31], 7: ["August", 3, 31], 8: ["September", 6, 30], 9: ["October", 1, 31], 10: ["November", 4, 30], 11: ["December", 6, 31]};
-	
+
 	let months = document.querySelectorAll(".month");
 	let dowNames = ["S", "M", "T", "W", "R", "F", "S"];
 
@@ -17,7 +17,7 @@ function fillMonths() {
 
 	for (let i=0; i <= d.getMonth(); i++) {
 		let currMonth = months[i];
-		
+
 		let monthTitle = document.createElement("h2");
 		monthTitle.innerText = monthsNames[i][0];
 
@@ -90,7 +90,8 @@ function fillMonths() {
 			}
 		}).then(function() {
 			document.getElementById("goalProgress").innerText = currProgress;
-		})
+			document.getElementById("loading").style.display = "none";
+		});
 	}
 
 	for (let o = d.getMonth()+1; o < 12 - d.getMonth(); o++) {

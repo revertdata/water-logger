@@ -54,6 +54,22 @@ footer {
 	background-color: black;
 }
 
+#dyno {
+	margin-top: 50px;
+	width: 400px;
+}
+
+#dyno img {
+	width: 200px;
+	height: 200px;
+}
+
+#dyno p {
+	display: block;
+	
+	text-align: center;
+}
+
 .row {
 	display: flex;
 	justify-content: center;
