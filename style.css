@@ -113,6 +113,8 @@ footer {
 
 .today {
 	border: 1px solid pink;
+	border-top-color: pink !important;
+	border-left-color: pink !important;
 }
 
 .goalMet {
