@@ -29,7 +29,9 @@ CREATE TABLE IF NOT EXISTS january (
 ## To Do
 - [x] &nbsp; Counter to see how many days I've had over 50 fl oz of water (since 183 days is my goal)
 - [x] &nbsp; Sleeping dyno loading gif thing
-- [x] &nbsp; Use MST instead of GMT for updating **NOT A JAVASCRIPT/PYTHON ISSUE!  `heroku config:add TZ="America/Denver"`**
+- [x] &nbsp; Use MST instead of GMT for updating
+	* **edit: NOT A JAVASCRIPT/PYTHON ISSUE!**
+	* `heroku config:add TZ="America/Denver"`
 - [ ] &nbsp; Fix to POST new entries (CORS issue?).  Temporary fix is to manually insert 0 values into monthly tables, but it's very inconvenient.  Only added 0s up through February.
 - [ ] &nbsp; Enable to log entires on mobile.  Also fix to stay logged in after authentication.
 - [ ] &nbsp; Fill up the boxes depending on progress to 50 fl oz?  Might look too busy.

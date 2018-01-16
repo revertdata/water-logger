@@ -60,15 +60,15 @@ function fillMonths() {
 
 						for (let n=0; n < monthInfo.length; n++) {
 							if (monthInfo[n]['did'] == daysCount) {
-								if (monthInfo[n]['amount'] != 0) {
-									day.innerText = monthInfo[n]['amount'];
-									day.className += " filled";
-								}
+								day.innerText = monthInfo[n]['amount'];
+								day.className += " filled";
 							}
 						}
 
 						if (daysCount == d.getDate()) {
 							day.className += " today";
+						} else if (daysCount > d.getDate()) {
+							day.innerHTML = "&nbsp;";
 						}
 
 						if (day.innerText >= 50) {
