@@ -94,7 +94,7 @@ function fillMonths() {
 		});
 	}
 
-	for (let o = d.getMonth()+1; o < 13 - d.getMonth(); o++) {
+	for (let o = d.getMonth()+1; o < (12 + d.getMonth()) - d.getMonth(); o++) {
 		months[o].style.display = "none";
 	}
 }
