@@ -3,6 +3,7 @@ let apiURL = "https://water-logger.herokuapp.com";
 let startNumbering = false;
 let daysCount = 1;
 let currProgress = 0;
+let currYear = 2019;
 
 function fillMonths() {
 	"use strict";
@@ -15,7 +16,7 @@ function fillMonths() {
 
 	let d = new Date();
 
-	for (let i=0; i <= d.getMonth(); i++) {
+	for (let i=0; i <= 11; i++) {
 		let currMonth = months[i];
 
 		let monthTitle = document.createElement("h2");
@@ -65,11 +66,11 @@ function fillMonths() {
 							}
 						}
 
-						if (daysCount == d.getDate() && i == d.getMonth()) {
-							day.className += " today";
-						} else if (daysCount > d.getDate() && i == d.getMonth()) {
-							day.innerHTML = "&nbsp;";
-						}
+						// if (daysCount == d.getDate() && i == d.getMonth()) {
+						// 	day.className += " today";
+						// } else if (daysCount > d.getDate() && i == d.getMonth()) {
+						// 	day.innerHTML = "&nbsp;";
+						// }
 
 						if (day.innerText >= 50) {
 							day.className += " goalMet";
@@ -94,9 +95,9 @@ function fillMonths() {
 		});
 	}
 
-	for (let o = d.getMonth()+1; o < (12 + d.getMonth()) - d.getMonth(); o++) {
-		months[o].style.display = "none";
-	}
+	// for (let o = d.getMonth()+1; o < (12 + d.getMonth()) - d.getMonth(); o++) {
+	// 	months[o].style.display = "none";
+	// }
 }
 
 fillMonths();
